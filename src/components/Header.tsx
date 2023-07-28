@@ -25,7 +25,7 @@ const Header = () => {
           </div>
         </Link>
       </div>
-      <div className="flex items-center gap-6 md:gap-3 ml-auto sm:ml-0">
+      <div className="flex items-center gap-4 md:gap-3 ml-auto sm:ml-0">
         <AiOutlineSearch className="text-2xl cursor-pointer shrink-0" />
         <ModeToggle />
         <Button className="bg-[#2858d9] text-white px-5 py-[6px] hover:bg-[#2858d9] hover:opacity-80 transition-all">
