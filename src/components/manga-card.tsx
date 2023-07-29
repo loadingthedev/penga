@@ -21,7 +21,20 @@ const Mangacard = () => {
           </h4>
         </Link>
       </CardContent>
-      <CardFooter></CardFooter>
+      <CardFooter className="flex flex-col p-0 text-xs w-full mt-2 gap-1">
+        <div className="flex items-center gap-1">
+          <div className="bg-gray-200 text-black rounded-md hover:bg-primary-blue px-1 py-2 hover:text-white">
+            Chapter 98
+          </div>
+          <div>Jul 29, 23</div>
+        </div>
+        <div className="flex items-center gap-1">
+          <div className="bg-gray-200 text-black rounded-md hover:bg-primary-blue px-1 py-2 hover:text-white">
+            Chapter 98
+          </div>
+          <div>Jul 29, 23</div>
+        </div>
+      </CardFooter>
     </Card>
   );
 };

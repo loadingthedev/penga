@@ -5,12 +5,16 @@ import { ScrollContainer } from "react-indiana-drag-scroll";
 import CardHeader from "@/components/ui/cards-header";
 import Mangacard from "@/components/manga-card";
 
-const LatestUpdates = () => {
+interface ScroolCardsProps {
+  title: string;
+  link: string;
+}
+
+const ScroolCards = ({ title, link }: ScroolCardsProps) => {
   return (
     <section className="pb-4 border-b border-gray-200 dark:border-gray-700">
-      <CardHeader title="Latest Updates" link="/" />
+      <CardHeader title={title} link={link} />
 
-      {/* Scroll Cards */}
       <ScrollContainer
         className="flex gap-4 overflow-x-scroll scrollbar-hide"
         component="div"
@@ -23,4 +27,4 @@ const LatestUpdates = () => {
   );
 };
 
-export default LatestUpdates;
+export default ScroolCards;
