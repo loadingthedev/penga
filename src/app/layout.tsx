@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
+import "react-indiana-drag-scroll/dist/style.css";
 
 import { ThemeProvider } from "@/providers/theme-provider";
 import Header from "@/components/Header";
