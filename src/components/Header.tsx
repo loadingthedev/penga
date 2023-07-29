@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="h-[4.5rem] flex gap-6 items-center justify-between">
       <div className="flex items-center gap-5">
-        <BiMenuAltLeft className="text-white cursor-pointer text-4xl" />
+        <BiMenuAltLeft className="cursor-pointer text-4xl dark:text-white" />
         <Link href="/" className="hidden md:block">
           <div className="relative flex w-36 h-8">
             <Image
