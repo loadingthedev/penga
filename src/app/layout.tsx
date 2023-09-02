@@ -4,7 +4,7 @@ import { DM_Sans } from "next/font/google";
 import "react-indiana-drag-scroll/dist/style.css";
 
 import { ThemeProvider } from "@/providers/theme-provider";
-import Header from "@/components/Header";
+import Header from "@/components/header";
 
 const dmsans = DM_Sans({
   subsets: ["latin"],
@@ -27,10 +27,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={dmsans.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="container">
-            <Header />
-            {children}
-          </div>
+          <Header />
+          <div className="container">{children}</div>
         </ThemeProvider>
       </body>
     </html>

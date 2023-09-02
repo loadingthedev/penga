@@ -1,17 +1,27 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
-import { ModeToggle } from "./theme-toggle";
-import { Button } from "./ui/button";
+
+import { ModeToggle } from "@/components/theme-toggle";
+import { Button } from "@/components/ui/button";
+import Sidebar from "@/components/sidebar";
 
 const Header = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
-    <header className="h-[4.5rem] flex gap-6 items-center justify-between">
+    <header className="flex h-[4.5rem] items-center justify-between gap-6 px-5">
       <div className="flex items-center gap-5">
-        <BiMenuAltLeft className="cursor-pointer text-4xl dark:text-white" />
+        <BiMenuAltLeft
+          className="cursor-pointer text-4xl dark:text-white"
+          onClick={() => setIsSidebarOpen(true)}
+        />
         <Link href="/" className="hidden md:block">
-          <div className="relative flex w-36 h-8">
+          <div className="relative flex h-8 w-36">
             <Image
               src="/logo.webp"
               alt="logo"
@@ -36,16 +46,20 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="flex items-center gap-2 md:gap-3 ml-auto sm:ml-0">
-        <AiOutlineSearch className="text-2xl cursor-pointer shrink-0" />
+      <div className="ml-auto flex items-center gap-2 sm:ml-0 md:gap-3">
+        <AiOutlineSearch className="shrink-0 cursor-pointer text-2xl" />
         <ModeToggle />
         <Button
           size="sm"
-          className="bg-[#2858d9] text-white rounded-md hover:bg-[#2858d9] hover:opacity-80 transition-all"
+          className="rounded-md bg-[#2858d9] text-white transition-all hover:bg-[#2858d9] hover:opacity-80"
         >
           Login
         </Button>
       </div>
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+      />
     </header>
   );
 };

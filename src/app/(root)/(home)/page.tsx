@@ -1,5 +1,5 @@
-import Banner from "./components/Banner";
-import ScroolCards from "./components/ScroolCards";
+import Banner from "./components/banner";
+import ScroolCards from "./components/scrool-cards";
 
 export default function Home() {
   return (
