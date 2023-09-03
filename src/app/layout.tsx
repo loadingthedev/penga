@@ -5,6 +5,7 @@ import "react-indiana-drag-scroll/dist/style.css";
 
 import { ThemeProvider } from "@/providers/theme-provider";
 import Header from "@/components/header";
+import QueryProvider from "@/providers/query-provider";
 
 const dmsans = DM_Sans({
   subsets: ["latin"],
@@ -27,8 +28,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={dmsans.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          <div className="container">{children}</div>
+          <QueryProvider>
+            <Header />
+            <div className="container">{children}</div>
+          </QueryProvider>
         </ThemeProvider>
       </body>
     </html>
