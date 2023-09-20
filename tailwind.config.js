@@ -51,6 +51,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        colorBoxDark: "hsl(0, 0%, 17%)",
       },
       fontFamily: {
         dm: ["var(--font-dm)"],
